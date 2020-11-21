@@ -57,7 +57,7 @@ class CategoryController extends Controller
     public function show(Category $category): View
     {
         $this->authorize('category');
-        return view('category.show')->with('products', $category->products()->get());
+        return view('category.show')->with('items', $category->products()->get());
     }
 
 
