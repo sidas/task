@@ -27,6 +27,9 @@ class CategoryTest extends TestCase
         ;
     }
 
+    /**
+     * @depends testCanCreateCategory
+     */
     public function testCanUpdateCategory()
     {
         $admin = $this->userRepository->findOneByName('admin');
@@ -40,6 +43,9 @@ class CategoryTest extends TestCase
         ;
     }
 
+    /**
+     * @depends testCanUpdateCategory
+     */
     public function testCanDeleteCategory()
     {
         $admin = $this->userRepository->findOneByName('admin');
