@@ -40,6 +40,9 @@ class ItemTest extends TestCase
         ;
     }
 
+    /**
+     * @depends testCanCreateItem
+     */
     public function testCanUpdateItem()
     {
         $this->testCanCreateItem();
@@ -60,6 +63,9 @@ class ItemTest extends TestCase
         ;
     }
 
+    /**
+     * @depends testCanUpdateItem
+     */
     public function testCanDeleteItem()
     {
         $this->testCanUpdateItem();
